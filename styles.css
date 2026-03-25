@@ -1217,22 +1217,22 @@ img {
     right: 30px;
     width: 60px;
     height: 60px;
-    background: var(--primary);
+    background: var(--green);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     font-size: 24px;
-    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.4);
+    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.4);
     z-index: 999;
     transition: var(--transition);
-    animation: pulse-blue 2s infinite;
+    animation: pulse-green 2s infinite;
 }
 
 .call-float:hover {
     transform: scale(1.1);
-    background: var(--primary-dark);
+    background: #15803d;
 }
 
 @keyframes pulse {
@@ -1241,10 +1241,10 @@ img {
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-@keyframes pulse-blue {
-    0% { box-shadow: 0 0 0 0 rgba(30, 64, 175, 0.5); }
-    70% { box-shadow: 0 0 0 15px rgba(30, 64, 175, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(30, 64, 175, 0); }
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(22, 163, 74, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
 }
 
 /* ===== Back to Top ===== */
