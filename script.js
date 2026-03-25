@@ -152,9 +152,17 @@ if (heroSection) {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+            // Close mobile menu first if open
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            // Small delay to allow overflow reset before scrolling
+            setTimeout(() => {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }, 50);
         }
     });
 });
