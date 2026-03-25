@@ -36,6 +36,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    overflow-x: hidden;
 }
 
 body {
@@ -1341,9 +1342,6 @@ img {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
-
-@media (max-width: 768px) {
     .top-bar-content {
         justify-content: center;
         text-align: center;
@@ -1380,6 +1378,29 @@ img {
         font-size: 16px;
         border-bottom: 1px solid var(--border);
     }
+
+    .navbar {
+        padding: 8px 0;
+    }
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    .logo-title {
+        font-size: 15px;
+    }
+    .logo-subtitle {
+        font-size: 10px;
+    }
+    .hero h1 {
+        font-size: 34px;
+    }
+    .hero-sub {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
 
     .hero h1 {
         font-size: 28px;
