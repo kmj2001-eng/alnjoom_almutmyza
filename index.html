@@ -49,8 +49,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome Icons (lazy loaded) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
     <link rel="stylesheet" href="styles.css">
 
@@ -863,7 +864,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <img src="images/logo.png" alt="مؤسسة النجوم المتميزة" width="60" height="60" class="footer-logo">
+                    <img src="images/logo.png" alt="مؤسسة النجوم المتميزة لصيانة التكييف - المدينة المنورة" width="60" height="60" class="footer-logo" loading="lazy">
                     <h3>مؤسسة النجوم المتميزة لصيانة التكييف</h3>
                     <p>مؤسسة متخصصة في صيانة وغسيل وتركيب وإصلاح جميع أنواع المكيفات في المدينة المنورة والعزيزية. خبرة تزيد عن 10 سنوات مع فريق فني معتمد.</p>
                     <div class="footer-contact">
