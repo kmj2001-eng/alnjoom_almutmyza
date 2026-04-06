@@ -103,7 +103,7 @@
 </head>
 <body>
     <!-- Simple Header -->
-    <header class="main-header" style="position: relative;">
+    <header class="main-header" id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="../" class="logo">
@@ -113,9 +113,19 @@
                         <span class="logo-subtitle">لصيانة التكييف</span>
                     </div>
                 </a>
-                <a href="tel:+966590917476" class="btn btn-primary" style="font-size: 0.95rem;">
-                    <i class="fas fa-phone-alt"></i> 0590917476
-                </a>
+                <button class="menu-toggle" aria-label="القائمة" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../">الرئيسية</a></li>
+                    <li><a href="../صيانة-مكيفات-سبليت/">صيانة سبليت</a></li>
+                    <li><a href="../غسيل-مكيفات/">غسيل مكيفات</a></li>
+                    <li><a href="../تركيب-مكيفات/">تركيب مكيفات</a></li>
+                    <li><a href="../تعبئة-فريون/">تعبئة فريون</a></li>
+                    <li><a href="../نصائح-صيانة-مكيفات/" class="active">نصائح الصيانة</a></li>
+                    <li><a href="../اعطال-المكيفات/">أعطال المكيفات</a></li>
+                    <li><a href="tel:+966590917476" class="nav-cta"><i class="fas fa-phone-alt"></i> اتصل الآن</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -217,5 +227,21 @@
     <a href="https://wa.me/966590917476?text=السلام عليكم، قرأت مقالكم عن نصائح الصيانة" class="whatsapp-float" target="_blank" aria-label="تواصل معنا عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+    }
+    </script>
 </body>
 </html>
