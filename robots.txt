@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /og-generator.html
 
-Sitemap: https://www.njoomac.org/sitemap.xml
+Sitemap: https://njoomac.org/sitemap.xml

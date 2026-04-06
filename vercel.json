@@ -2,8 +2,8 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "njoomac.org" }],
-      "destination": "https://www.njoomac.org/:path*",
+      "has": [{ "type": "host", "value": "www.njoomac.org" }],
+      "destination": "https://njoomac.org/:path*",
       "permanent": true
     }
   ],
